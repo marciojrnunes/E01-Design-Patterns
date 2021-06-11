@@ -1,16 +1,18 @@
-package singleton;
 
 public class DBConnection {
 
-    private String connectionString;
+    private static String connectionString;
 
-    public DBConnection(String connectionString) {
+    private DBConnection(String connectionString) {
         this.connectionString = connectionString;
     }
 
-    public void connect() throws InterruptedException {
-        System.out.println("Connecting to " + this.connectionString);
-        Thread.sleep(1000);
-        System.out.println("Connected!!");
+    private static DBConnection dbConnection;
+
+    public static DBConnection connect(String connectionString) throws InterruptedException{
+        if (dbConnection == null) {
+            dbConnection = new DBConnection(connectionString);
+        }
+        return dbConnection;
     }
 }
