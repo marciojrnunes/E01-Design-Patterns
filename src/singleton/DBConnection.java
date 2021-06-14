@@ -4,10 +4,24 @@ public class DBConnection {
 
     private String connectionString;
 
-    public DBConnection(String connectionString) {
-        this.connectionString = connectionString;
+    private DBConnection(){}
+    private static DBConnection instance;
+
+    // public DBConnection(String connectionString) {
+    //     this.connectionString = connectionString;
+    // }
+
+    public static DBConnection getInstance(){
+        if (instance == null){
+            instance = new DBConnection();
+        }
+        return instance;
     }
 
+    public void setConnectionString(String connectionString){
+        this.connectionString = connectionString;
+    }
+    
     public void connect() throws InterruptedException {
         System.out.println("Connecting to " + this.connectionString);
         Thread.sleep(1000);
