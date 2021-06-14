@@ -3,18 +3,15 @@ package singleton;
 public class DBConnection {
 
     private String connectionString;
-/*
-    public DBConnection(String connectionString) {
-        this.connectionString = connectionString;
-    }
-*/
 
-    private  DBConnection(){}
+    private  DBConnection(String connectionString){
+		this.connectionString = connectionString;
+	}
     private static DBConnection instance;
 
-    public static DBConnection getInstance(){
+    public static DBConnection getInstance(String connectionString){
         if(instance == null){
-            instance = new DBConnection();
+            instance = new DBConnection(connectionString);
         }
         return instance;
     }
