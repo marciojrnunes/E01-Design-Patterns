@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // instanciando a classe através do singleton
         DBConnection conn1 = DBConnection.getInstance("jdbc:as400://myiSeries;proxy server=myHODServer:3470");
         DBConnection conn2 = DBConnection.getInstance("jdbc:as400://myiSeries;proxy server=myHODServer:3470");
 

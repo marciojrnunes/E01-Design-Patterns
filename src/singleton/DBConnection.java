@@ -17,8 +17,8 @@ public class DBConnection {
     }
 
     public static DBConnection getInstance(String connectionString) {
-        if (instance == null)
-            instance = new DBConnection(connectionString);
+        if (instance == null) // se não existe instância
+            instance = new DBConnection(connectionString); // cria uma nova instância
         return instance;
     }
 }
