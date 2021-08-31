@@ -1,6 +1,7 @@
 package observer;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Subject {
@@ -12,11 +13,18 @@ public class Subject {
     }
 
     public void add(Observer observer) {
-//        TODO adicionar observer para ser notificado posteriormente
+
+        observers.add(observer);
     }
 
     public void notifyObservers() {
-//        TODO notificar observers adicionados
+        
+        Iterator it = observers.iterator();
+
+        while (it.hasNext()) {
+            Observer obs= (Observer) it.next();
+            obs.update(this);
+        }
     }
 
 }
