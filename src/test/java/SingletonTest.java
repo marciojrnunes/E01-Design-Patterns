@@ -32,8 +32,8 @@ public class SingletonTest {
         Method getInstance = DBConnection.class.getDeclaredMethod("getInstance", String.class);
         getInstance.setAccessible(true);
 
-        DBConnection db1 = (DBConnection) getInstance.invoke("jdbc:as400://myiSeries;proxy server=myHODServer:3470");
-        DBConnection db2 = (DBConnection) getInstance.invoke("jdbc:as400://myiSeries;proxy server=myHODServer:3470");
+        DBConnection db1 = (DBConnection) getInstance.invoke(null, "jdbc:as400://myiSeries;proxy server=myHODServer:3470");
+        DBConnection db2 = (DBConnection) getInstance.invoke(null, "jdbc:as400://myiSeries;proxy server=myHODServer:3470");
 
         assertEquals(db1, db2);
     }
