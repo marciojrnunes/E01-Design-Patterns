@@ -53,4 +53,3 @@ Essa classe deverá implementar um `setStrategy(PasswordStrategy)` para definir 
 **Classes presentes no pacote `observer`**
 
 Dado o código do padrão observer presente no pacote `observer`, implemente os trechos que estão faltando.
-Execute a classe `observer.Main` para verificar se tudo foi implementado corretamente.
