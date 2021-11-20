@@ -38,9 +38,15 @@ Por se tratar de uma biblioteca que será exposta à comunidade, é de preocupa�
 Ainda, o módulo deve respeitar o princípio de aberto/fechado para proteger a biblioteca de acessos e modificações indevidas.
 
 Ao estudar o problema, você chegou a conclusão de que essa validação pode ser feita utilizando o padrão strategy.
-Implemente este padrão com base nos arquivos já existentes no pacote `strategy`, fornecendo inclusive um exemplo de execução na classe `strategy.Main`.
-Seu padrão deverá suportar pelo menos 3 modos diferentes de autenticação, a serem verificados separadamente (um por classe).
-Ex.: tamanho, presença de letras maiúsculas, e presença de caracteres especiais.
+Implemente este padrão com base nos arquivos já existentes no pacote `strategy`.
+Seu padrão deverá suportar três modos diferentes de autenticação:
+1. `LengthStrategy`, senhas devem ter pelo menos 8 caracteres de tamanho
+2. `UpperCaseStrategy`, senhas devem ter pelo menos uma letra maiúscula
+3. `SpecialCharStrategy`, senhas devem ter pelo menos um caractere especial
+
+Para isso, Suas classes de validação deverão herdar a classe abstrata `PasswordStrategy`. 
+Você ainda deverá alterar a classe `PasswordValidator` para que ela faça a verificação das estratégias criadas anteriormente.
+Essa classe deverá implementar um `setStrategy(PasswordStrategy)` para definir a estratégia de validação atual e um método `validate` para chamar a validação da estratégia definida anteriormente.
 
 ## Padrão Observer
 
