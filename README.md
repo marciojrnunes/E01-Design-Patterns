@@ -11,8 +11,7 @@ Professor: João Eduardo Montandon
 O padrão de projeto Singleton é utilizado como forma de disponibilizar apenas uma instância de uma determinada classe.
 Esse tipo de comportamento é especialmente útil em situações onde um determinado recurso a ser obtido deve ser compartilhado em diferentes partes da aplicação, como gerenciadores de logging.
 
-Altere a classe `singleton.DBConnection` para que sua instância seja disponibilizada por meio de um singleton. 
-Para verificar se o exercício foi implementado corretamente, verifique se a mensagem `Same connection? true` é retornada ao executar o método main presente na classe `singleton.Main`.
+Altere a classe `singleton.DBConnection` para que sua instância seja disponibilizada por meio de um singleton.
 
 ## Padrão Decorator
 
@@ -25,7 +24,10 @@ Rapidamente você observou que esse problema é grave, pois o número de classes
 
 Ao analisar o problema mais de perto, você percebeu que ele poderia ser tratado pelo padrão decorador.
 Implemente uma demonstração desse padrão para os membros da equipe de TI com base no modelo já existente no pacote `decorator`.
-Essa implementação deverá conter pelo menos quatro tipos de acréscimo.
+Essa implementação deverá conter as quatro classes de acréscimo: `Ketchup`, `Bacon`, `Queijo`, e `Salada`.
+Ainda, as classes deverão reimplementar os métodos `imprimeIngrediente` e `valorDoIngrediente`, de acordo com as seguintes informações:
+* Ingredientes deverão ser impressos separados por vírgula
+* Os ingredientes possuem o seguinte preço: Ketchup custa 1.00, Bacon custa 1.50, Queijo custa 0.75, e Salada custa 0.25
 
 ## Padrão Strategy
 
