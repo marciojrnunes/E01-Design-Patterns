@@ -10,9 +10,9 @@ public class DBConnection {
         this.connectionString = connectionString;
     }
 
-    public static DBConnection getInstance(String connectionString) {
+    public static DBConnection getInstance(String connectionStrings) {
         if (instance == null)
-            instance = new DBConnection(connectionString);
+            instance = new DBConnection(connectionStrings);
 
         return instance;
     }
