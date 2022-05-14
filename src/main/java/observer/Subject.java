@@ -11,12 +11,14 @@ public class Subject {
         this.observers = new ArrayList<>();
     }
 
-    public void add(Observer observer) {
-//        TODO adicionar observer para ser notificado posteriormente
+    public void addObserver(Observer observer) {
+        observer.add(observer);
     }
 
     public void notifyObservers() {
-//        TODO notificar observers adicionados
+        for (Observer atual : observers){
+            atual.update(this);
+        }
     }
 
 }
