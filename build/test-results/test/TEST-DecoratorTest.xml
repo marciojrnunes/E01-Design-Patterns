@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PadrÃ£o Decorator" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-20T23:13:50" hostname="SB2" time="0.009">
-  <properties/>
-  <testcase name="Ingredientes devem ter o preÃ§o certo" classname="DecoratorTest" time="0.004"/>
-  <testcase name="Deve ter os quatro ingredientes" classname="DecoratorTest" time="0.002"/>
-  <testcase name="Ingredientes devem poder ser combinados" classname="DecoratorTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
