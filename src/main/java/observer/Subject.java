@@ -12,11 +12,15 @@ public class Subject {
     }
 
     public void add(Observer observer) {
-//        TODO adicionar observer para ser notificado posteriormente
+//        Adciona um observer para ser notificado posteriormente
+        this.observers.add(observer);
     }
 
     public void notifyObservers() {
-//        TODO notificar observers adicionados
+//        notifica observers adicionados
+        for(Observer o: observers) {
+            o.update(Subject.this);
+        }
     }
 
 }
