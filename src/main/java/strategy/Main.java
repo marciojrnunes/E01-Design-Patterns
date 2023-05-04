@@ -6,7 +6,7 @@ public class Main {
         PasswordValidator validator = new PasswordValidator();
 
         System.out.println(validator.validate("123123456"));
-        System.out.println(validator.validate("1212"));
+        //System.out.println(validator.validate("1212"));
 
     }
 }
