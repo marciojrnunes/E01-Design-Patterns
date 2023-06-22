@@ -2,9 +2,17 @@ package strategy;
 
 public class PasswordValidator {
 
-    // FIXME só aceita um tipo de validação (por tamanho)
+    private PasswordStrategy strategy;
+
     public boolean validate(String password) {
-        return password.length() >= 8;
+        return strategy.validate(password);
     }
 
+    public PasswordValidator() {
+        strategy = new UpperCaseStrategy();
+    }
+
+    public void setStrategy(PasswordStrategy strategy) {
+        this.strategy = strategy;
+    }
 }
