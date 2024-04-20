@@ -14,10 +14,10 @@ public class DBConnection {
     public static synchronized DBConnection getInstance() {
         
         if (instance == null) {
-            // Cria uma nova instância se ainda não existir
+    
             instance = new DBConnection();
         }
-        // Retorna a instância existente
+    
         return instance;
     }
     public void connect() throws InterruptedException {
