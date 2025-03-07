@@ -1,6 +1,6 @@
 # Exercício 01: Padrões de Projeto
 
-Professor: João Eduardo Montandon
+Professor: Márcio Júnior Nunes
 
 **Objetivo: Nesta lista, você irá experimentar o uso dos principais padrões de projeto existentes.**
 
