@@ -1,8 +1,7 @@
 package decorator;
 
 public class Pao extends IngredienteDecorator {
-
-
+    
     public Pao(Ingrediente ingrediente) {
         super(ingrediente);
     }
